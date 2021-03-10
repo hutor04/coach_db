@@ -1,4 +1,5 @@
 <template>
+    <div>
     <section>
         <base-card>
             <h2>{{ fullName }}</h2>
@@ -9,7 +10,6 @@
         <base-card>
             <header>
                 <h2>Interested? Reach out now!</h2>
-                <base-button link :to="contactLink">Contact Coach</base-button>
             </header>
             <router-view></router-view>
         </base-card>
@@ -25,14 +25,14 @@
             <p>{{ description }}</p>
         </base-card>
     </section>
+    </div>
 </template>
 
 <script>
-  import BaseButton from '../../components/ui/BaseButton';
   import BaseBadge from '../../components/ui/BaseBadge';
   export default {
     name: 'CoachDetail',
-    components: { BaseBadge, BaseButton },
+    components: { BaseBadge },
     props: ['id'],
     data() {
       return {
